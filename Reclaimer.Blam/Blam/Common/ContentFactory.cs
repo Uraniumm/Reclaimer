@@ -87,6 +87,7 @@ namespace Reclaimer.Blam.Common
                 case CacheType.MccHalo3ODSTU7:
                     content = item.ReadMetadata<Halo3.bitmap>();
                     break;
+                case CacheType.HaloReachAlpha:
                 case CacheType.HaloReachBeta:
                 case CacheType.HaloReachRetail:
                 case CacheType.MccHaloReach:
@@ -151,6 +152,7 @@ namespace Reclaimer.Blam.Common
                     case CacheType.MccHalo3ODSTU7:
                         content = item.ReadMetadata<Halo3.render_model>();
                         break;
+                    case CacheType.HaloReachAlpha:
                     case CacheType.HaloReachBeta:
                     case CacheType.HaloReachRetail:
                     case CacheType.MccHaloReach:
@@ -199,6 +201,7 @@ namespace Reclaimer.Blam.Common
                     case CacheType.MccHalo3ODSTU7:
                         content = item.ReadMetadata<Halo3.scenario_structure_bsp>();
                         break;
+                    case CacheType.HaloReachAlpha:
                     case CacheType.HaloReachBeta:
                     case CacheType.HaloReachRetail:
                     case CacheType.MccHaloReach:
@@ -243,6 +246,7 @@ namespace Reclaimer.Blam.Common
                 case CacheType.Halo3ODST:
                     content = item.ReadMetadata<Halo3.sound>();
                     break;
+                case CacheType.HaloReachAlpha:
                 case CacheType.HaloReachBeta:
                 case CacheType.HaloReachRetail:
                     content = item.ReadMetadata<HaloReach.sound>();

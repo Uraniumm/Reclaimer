@@ -93,6 +93,7 @@ namespace Reclaimer.Blam.Common.Gen3
             string key;
             switch (cache.CacheType)
             {
+                case CacheType.HaloReachAlpha:
                 case CacheType.HaloReachBeta:
                     key = HaloReach.CacheFile.BetaKey;
                     break;

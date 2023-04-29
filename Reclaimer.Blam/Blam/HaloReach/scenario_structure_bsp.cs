@@ -42,17 +42,20 @@ namespace Reclaimer.Blam.HaloReach
         [Offset(612, MinVersion = (int)CacheType.MccHaloReach)]
         public BlockCollection<BspGeometryInstanceBlock> GeometryInstances { get; set; }
 
+        [Offset(1076, MaxVersion = (int)CacheType.HaloReachBeta)]
         [Offset(1112, MaxVersion = (int)CacheType.HaloReachRetail)]
         [Offset(1100, MinVersion = (int)CacheType.HaloReachRetail, MaxVersion = (int)CacheType.MccHaloReach)]
         [Offset(1128, MinVersion = (int)CacheType.MccHaloReach)]
         public BlockCollection<SectionBlock> Sections { get; set; }
 
+        [Offset(1088, MaxVersion = (int)CacheType.HaloReachBeta)]
         [Offset(1124, MaxVersion = (int)CacheType.HaloReachRetail)]
         [Offset(1112, MinVersion = (int)CacheType.HaloReachRetail, MaxVersion = (int)CacheType.MccHaloReach)]
         [Offset(1140, MinVersion = (int)CacheType.MccHaloReach)]
         public BlockCollection<BoundingBoxBlock> BoundingBoxes { get; set; }
 
         [MinVersion((int)CacheType.HaloReachRetail)]
+        [Offset(1248, MaxVersion = (int)CacheType.HaloReachBeta)]
         [Offset(1296, MinVersion = (int)CacheType.HaloReachRetail, MaxVersion = (int)CacheType.MccHaloReach)]
         [Offset(1336, MinVersion = (int)CacheType.MccHaloReach)]
         public ResourceIdentifier InstancesResourcePointer { get; set; }
@@ -167,16 +170,13 @@ namespace Reclaimer.Blam.HaloReach
     [FixedSize(4, MinVersion = (int)CacheType.HaloReachRetail)]
     public class BspGeometryInstanceBlock
     {
-        [Offset(0)]
-        [VersionSpecific((int)CacheType.HaloReachBeta)]
+        [Offset(0, MinVersion = (int)CacheType.HaloReachAlpha, MaxVersion = (int)CacheType.HaloReachRetail)]
         public float TransformScale { get; set; }
 
-        [Offset(4)]
-        [VersionSpecific((int)CacheType.HaloReachBeta)]
+        [Offset(4, MinVersion = (int)CacheType.HaloReachAlpha, MaxVersion = (int)CacheType.HaloReachRetail)]
         public Matrix4x4 Transform { get; set; }
 
-        [Offset(52)]
-        [VersionSpecific((int)CacheType.HaloReachBeta)]
+        [Offset(52, MinVersion = (int)CacheType.HaloReachAlpha, MaxVersion = (int)CacheType.HaloReachRetail)]
         public short SectionIndex { get; set; }
 
         [Offset(124, MaxVersion = (int)CacheType.HaloReachRetail)]

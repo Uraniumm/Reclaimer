@@ -48,6 +48,7 @@ namespace Reclaimer.Blam.HaloReach
         [Offset(176)]
         public BlockCollection<NodeMapBlock> NodeMaps { get; set; }
 
+        [Offset(224, MaxVersion = (int)CacheType.HaloReachBeta)]
         [Offset(236, MaxVersion = (int)CacheType.HaloReachRetail)]
         [Offset(248, MinVersion = (int)CacheType.HaloReachRetail)]
         public ResourceIdentifier ResourcePointer { get; set; }

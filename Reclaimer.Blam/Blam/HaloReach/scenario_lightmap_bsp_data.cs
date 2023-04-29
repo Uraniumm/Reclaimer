@@ -9,6 +9,7 @@ namespace Reclaimer.Blam.HaloReach
         [Offset(124, MinVersion = (int)CacheType.HaloReachRetail)]
         public BlockCollection<SectionBlock> Sections { get; set; }
 
+        [Offset(232, MaxVersion = (int)CacheType.HaloReachBeta)]
         [Offset(244, MaxVersion = (int)CacheType.HaloReachRetail)]
         [Offset(268, MinVersion = (int)CacheType.HaloReachRetail)]
         public ResourceIdentifier ResourcePointer { get; set; }

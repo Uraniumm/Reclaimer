@@ -9,6 +9,7 @@ namespace Reclaimer.Blam.HaloReach
         [Offset(76, MinVersion = (int)CacheType.HaloReachRetail)]
         public BlockCollection<StructureBspBlock> StructureBsps { get; set; }
 
+        [Offset(1792, MaxVersion = (int)CacheType.HaloReachBeta)]
         [Offset(1828, MaxVersion = (int)CacheType.HaloReachRetail)]
         [Offset(1844, MinVersion = (int)CacheType.HaloReachRetail, MaxVersion = (int)CacheType.MccHaloReach)]
         [Offset(1856, MinVersion = (int)CacheType.MccHaloReach)]

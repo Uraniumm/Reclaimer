@@ -209,6 +209,11 @@
         MccHalo3ODSTU7,
 
         [CacheMetadata(CacheGeneration.Gen3, Xbox360, Beta)]
+        [BuildString("08516.10.02.19.1607.omaha_alpha", "alpha", PreBeta)]
+        HaloReachAlpha,
+
+        [CacheMetadata(CacheGeneration.Gen3, Xbox360, Beta)]
+        // [BuildString("08516.10.02.19.1607.omaha_alpha", "beta", PreBeta)]
         [BuildString("09449.10.03.25.1545.omaha_beta", "beta", PreBeta)]
         [BuildString("09730.10.04.09.1309.omaha_delta", "beta")]
         HaloReachBeta,

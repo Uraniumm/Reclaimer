@@ -115,6 +115,7 @@ namespace Reclaimer.Blam.Common
                 case CacheType.MccHalo3ODSTU7:
                     return new MccHalo3.CacheFileU6(args);
 
+                case CacheType.HaloReachAlpha:
                 case CacheType.HaloReachBeta:
                 case CacheType.HaloReachRetail:
                     return new HaloReach.CacheFile(args);
