@@ -103,12 +103,11 @@
         MccHalo2,
 
         [CacheMetadata(CacheGeneration.Gen3, Xbox360, Uncompressed, PreBeta)]
-        //[BuildString("05241.06.09.21.1534.first_playt", "alpha_1106")]
+        // [BuildString("05241.06.09.21.1534.first_playt", "alpha_1106")]
         [BuildString("06481.06.11.17.1330.alpha_relea", "alpha_1106")]
         Halo3AlphaPimps,
 
         [CacheMetadata(CacheGeneration.Gen3, Xbox360, Uncompressed, PreBeta)]
-        [BuildString("06481.06.11.17.1330.alpha_relea", "alpha_1106")]
         [BuildString("08117.07.03.07.1702.delta", "alpha_0307")]
         [BuildString("08172.07.03.08.2240.delta", "alpha_0308")]
         Halo3Alpha,
