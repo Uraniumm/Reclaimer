@@ -15,14 +15,17 @@ namespace Reclaimer.Blam.Halo3
             : base(item)
         { }
 
+        [Offset(72, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(60, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(64, MinVersion = (int)CacheType.MccHalo3U4)]
         public RealBounds XBounds { get; set; }
 
+        [Offset(80, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(68, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(72, MinVersion = (int)CacheType.MccHalo3U4)]
         public RealBounds YBounds { get; set; }
 
+        [Offset(88, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(76, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(80, MinVersion = (int)CacheType.MccHalo3U4)]
         public RealBounds ZBounds { get; set; }
@@ -37,26 +40,31 @@ namespace Reclaimer.Blam.Halo3
         [Offset(196, MinVersion = (int)CacheType.Halo3ODST)]
         public BlockCollection<ShaderBlock> Shaders { get; set; }
 
+        [Offset(444, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(432, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(448, MinVersion = (int)CacheType.MccHalo3U4, MaxVersion = (int)CacheType.Halo3ODST)]
         [Offset(436, MinVersion = (int)CacheType.Halo3ODST)]
         public BlockCollection<BspGeometryInstanceBlock> GeometryInstances { get; set; }
 
+        [Offset(592, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(580, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(596, MinVersion = (int)CacheType.MccHalo3U4, MaxVersion = (int)CacheType.Halo3ODST)]
         [Offset(584, MinVersion = (int)CacheType.Halo3ODST)]
         public ResourceIdentifier ResourcePointer1 { get; set; }
 
+        [Offset(776, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(740, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(756, MinVersion = (int)CacheType.MccHalo3U4, MaxVersion = (int)CacheType.Halo3ODST)]
         [Offset(744, MinVersion = (int)CacheType.Halo3ODST)]
         public BlockCollection<SectionBlock> Sections { get; set; }
 
+        [Offset(788, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(752, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(768, MinVersion = (int)CacheType.MccHalo3U4, MaxVersion = (int)CacheType.Halo3ODST)]
         [Offset(756, MinVersion = (int)CacheType.Halo3ODST)]
         public BlockCollection<BspBoundingBoxBlock> BoundingBoxes { get; set; }
 
+        [Offset(896, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(860, MaxVersion = (int)CacheType.MccHalo3U4)]
         [Offset(876, MinVersion = (int)CacheType.MccHalo3U4, MaxVersion = (int)CacheType.Halo3ODST)]
         [Offset(864, MinVersion = (int)CacheType.Halo3ODST)]
@@ -138,7 +146,7 @@ namespace Reclaimer.Blam.Halo3
 
         #endregion
     }
-
+    [FixedSize(192, MaxVersion = (int)CacheType.Halo3Alpha)]
     [FixedSize(236, MaxVersion = (int)CacheType.Halo3Retail)]
     [FixedSize(220, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3)]
     [FixedSize(280, MinVersion = (int)CacheType.MccHalo3, MaxVersion = (int)CacheType.Halo3ODST)]
@@ -155,6 +163,7 @@ namespace Reclaimer.Blam.Halo3
         [Offset(16)]
         public RealBounds ZBounds { get; set; }
 
+        [Offset(164, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(172, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(156, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3)]
         [Offset(216, MinVersion = (int)CacheType.MccHalo3, MaxVersion = (int)CacheType.Halo3ODST)]
@@ -163,7 +172,8 @@ namespace Reclaimer.Blam.Halo3
         public short SectionIndex { get; set; }
     }
 
-    [FixedSize(120)]
+    [FixedSize(108, MaxVersion = (int)CacheType.Halo3Alpha)]
+    [FixedSize(120, MinVersion = (int)CacheType.Halo3Alpha)]
     public class BspGeometryInstanceBlock
     {
         [Offset(0)]

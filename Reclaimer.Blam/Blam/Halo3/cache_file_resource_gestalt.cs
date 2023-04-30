@@ -6,6 +6,7 @@ namespace Reclaimer.Blam.Halo3
 {
     public class cache_file_resource_gestalt
     {
+        [Offset(24, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(36, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(88, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3)]
         [Offset(100, MinVersion = (int)CacheType.MccHalo3, MaxVersion = (int)CacheType.Halo3ODST)]
@@ -13,6 +14,7 @@ namespace Reclaimer.Blam.Halo3
         [Offset(100, MinVersion = (int)CacheType.MccHalo3ODST)]
         public BlockCollection<ResourceEntryBlock> ResourceEntries { get; set; }
 
+        [Offset(48, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(132, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(316, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3)]
         [Offset(328, MinVersion = (int)CacheType.MccHalo3, MaxVersion = (int)CacheType.Halo3ODST)]
@@ -20,6 +22,7 @@ namespace Reclaimer.Blam.Halo3
         [Offset(328, MinVersion = (int)CacheType.MccHalo3ODST)]
         public int FixupDataSize { get; set; }
 
+        [Offset(60, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(144, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(328, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3)]
         [Offset(340, MinVersion = (int)CacheType.MccHalo3, MaxVersion = (int)CacheType.Halo3ODST)]
@@ -28,6 +31,7 @@ namespace Reclaimer.Blam.Halo3
         public Pointer FixupDataPointer { get; set; }
     }
 
+    [FixedSize(88, MaxVersion = (int)CacheType.Halo3Alpha)]
     [FixedSize(96, MaxVersion = (int)CacheType.Halo3Retail)]
     [FixedSize(64, MinVersion = (int)CacheType.Halo3Retail)]
     public class ResourceEntryBlock
@@ -35,7 +39,9 @@ namespace Reclaimer.Blam.Halo3
         [Offset(0)]
         public TagReference OwnerReference { get; set; }
 
-        [Offset(16)]
+        [Offset(18, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(16, MinVersion = (int)CacheType.Halo3Alpha)]
+        // [Offset(16)]
         public ResourceIdentifier ResourcePointer { get; set; }
 
         [Offset(24, MaxVersion = (int)CacheType.Halo3Retail)]
@@ -58,30 +64,32 @@ namespace Reclaimer.Blam.Halo3
         [MaxVersion((int)CacheType.Halo3Retail)]
         public int CacheIndex { get; set; }
 
-        [Offset(40)]
-        [MaxVersion((int)CacheType.Halo3Retail)]
+        [Offset(36, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(40, MinVersion = (int)CacheType.Halo3Alpha)]
         public int PrimaryOffset { get; set; }
 
-        [Offset(44)]
-        [MaxVersion((int)CacheType.Halo3Retail)]
+        [Offset(40, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(44, MinVersion = (int)CacheType.Halo3Alpha)]
         public int PrimarySize { get; set; }
 
-        [Offset(52)]
-        [MaxVersion((int)CacheType.Halo3Retail)]
+        [Offset(44, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(52, MinVersion = (int)CacheType.Halo3Alpha)]
         public int CacheIndex2 { get; set; }
 
-        [Offset(56)]
-        [MaxVersion((int)CacheType.Halo3Retail)]
+        [Offset(48, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(56, MinVersion = (int)CacheType.Halo3Alpha)]
         public int SecondaryOffset { get; set; }
 
-        [Offset(60)]
-        [MaxVersion((int)CacheType.Halo3Retail)]
+        [Offset(52, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(60, MinVersion = (int)CacheType.Halo3Alpha)]
         public int SecondarySize { get; set; }
 
+        [Offset(64, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(72, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(40, MinVersion = (int)CacheType.Halo3Retail)]
         public BlockCollection<ResourceFixupBlock> ResourceFixups { get; set; }
 
+        [Offset(76, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(84, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(52, MinVersion = (int)CacheType.Halo3Retail)]
         public BlockCollection<ResourceDefinitionFixupBlock> ResourceDefinitionFixups { get; set; }

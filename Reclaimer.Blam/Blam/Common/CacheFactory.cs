@@ -92,6 +92,7 @@ namespace Reclaimer.Blam.Common
                 case CacheType.Halo2Vista:
                     return new Halo2.CacheFile(args);
 
+                case CacheType.Halo3AlphaPimps:
                 case CacheType.Halo3Alpha:
                     return new Halo3Alpha.CacheFile(args);
 

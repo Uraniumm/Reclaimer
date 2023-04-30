@@ -20,7 +20,7 @@ namespace Reclaimer.Blam.Common
             ArgumentNullException.ThrowIfNull(reader);
             ArgumentNullException.ThrowIfNull(cache);
 
-            Id = cache.CacheType < CacheType.Halo3Alpha ? reader.ReadInt16() : reader.ReadInt32();
+            Id = cache.CacheType < CacheType.Halo3AlphaPimps ? reader.ReadInt16() : reader.ReadInt32();
             this.cache = cache;
         }
 
@@ -35,7 +35,7 @@ namespace Reclaimer.Blam.Common
 
         public void Write(EndianWriter writer, double? version)
         {
-            if (cache.CacheType < CacheType.Halo3Alpha)
+            if (cache.CacheType < CacheType.Halo3AlphaPimps)
                 writer.Write((short)Id);
             else
                 writer.Write(Id);

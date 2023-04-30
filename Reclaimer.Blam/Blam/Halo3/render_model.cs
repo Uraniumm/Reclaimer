@@ -322,7 +322,8 @@ namespace Reclaimer.Blam.Halo3
         public override string ToString() => ShaderReference.Tag?.TagName;
     }
 
-    [FixedSize(76)]
+    [FixedSize(56, MaxVersion = (int)CacheType.Halo3Alpha)]
+    [FixedSize(76, MinVersion = (int)CacheType.Halo3Alpha)]
     public class SectionBlock
     {
         [Offset(0)]
@@ -337,19 +338,23 @@ namespace Reclaimer.Blam.Halo3
         [Offset(30)]
         public short UnknownIndex { get; set; }
 
-        [Offset(40)]
+        [Offset(36, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(40, MinVersion = (int)CacheType.Halo3Alpha)]
         public short IndexBufferIndex { get; set; }
 
         [Offset(44)]
         public byte TransparentNodesPerVertex { get; set; }
 
-        [Offset(45)]
+        [Offset(41, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(45, MinVersion = (int)CacheType.Halo3Alpha)]
         public byte NodeIndex { get; set; }
 
-        [Offset(46)]
+        [Offset(42, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(46, MinVersion = (int)CacheType.Halo3Alpha)]
         public byte VertexFormat { get; set; }
 
-        [Offset(47)]
+        [Offset(43, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(47, MinVersion = (int)CacheType.Halo3Alpha)]
         public byte OpaqueNodesPerVertex { get; set; }
     }
 
@@ -391,7 +396,8 @@ namespace Reclaimer.Blam.Halo3
         public ushort VertexCount { get; set; }
     }
 
-    [FixedSize(56)]
+    [FixedSize(44, MaxVersion = (int)CacheType.Halo3Alpha)]
+    [FixedSize(56, MinVersion = (int)CacheType.Halo3Alpha)]
     public class BoundingBoxBlock : BspBoundingBoxBlock
     {
 

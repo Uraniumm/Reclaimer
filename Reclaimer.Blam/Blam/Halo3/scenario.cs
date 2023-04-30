@@ -5,6 +5,7 @@ namespace Reclaimer.Blam.Halo3
 {
     public class scenario
     {
+        [Offset(12, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(12, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(20, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3U12)]
         [Offset(24, MinVersion = (int)CacheType.MccHalo3U12, MaxVersion = (int)CacheType.Halo3ODST)]
@@ -12,6 +13,7 @@ namespace Reclaimer.Blam.Halo3
         [Offset(24, MinVersion = (int)CacheType.MccHalo3ODSTU7)]
         public BlockCollection<StructureBspBlock> StructureBsps { get; set; }
 
+        [Offset(1708, MaxVersion = (int)CacheType.Halo3Alpha)]
         [Offset(1736, MaxVersion = (int)CacheType.Halo3Beta)]
         [Offset(1720, MinVersion = (int)CacheType.Halo3Beta, MaxVersion = (int)CacheType.Halo3Retail)]
         [Offset(1776, MinVersion = (int)CacheType.Halo3Retail, MaxVersion = (int)CacheType.MccHalo3F6)]
@@ -23,6 +25,7 @@ namespace Reclaimer.Blam.Halo3
         public TagReference ScenarioLightmapReference { get; set; }
     }
 
+    [FixedSize(72, MaxVersion = (int)CacheType.Halo3Alpha)]
     [FixedSize(104, MaxVersion = (int)CacheType.Halo3Retail)]
     [FixedSize(108, MinVersion = (int)CacheType.Halo3Retail)]
     public class StructureBspBlock

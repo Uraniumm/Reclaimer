@@ -13,10 +13,12 @@ namespace Reclaimer.Blam.Halo3
         [Offset(2)]
         public short BspIndex { get; set; }
 
-        [Offset(308)]
+        [Offset(116, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(308, MinVersion = (int)CacheType.Halo3Alpha)]
         public BlockCollection<SectionBlock> Sections { get; set; }
 
-        [Offset(428)]
+        [Offset(236, MaxVersion = (int)CacheType.Halo3Alpha)]
+        [Offset(428, MinVersion = (int)CacheType.Halo3Alpha)]
         public ResourceIdentifier ResourcePointer { get; set; }
     }
 }
